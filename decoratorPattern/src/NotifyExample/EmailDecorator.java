@@ -1,6 +1,8 @@
 package NotifyExample;
 
 public class EmailDecorator extends BaseDecorator {
+    public EmailDecorator() {
+    }
 
     public EmailDecorator(Notifier notifier) {
         super(notifier);
@@ -9,6 +11,8 @@ public class EmailDecorator extends BaseDecorator {
     @Override
     public void send(String message) {
         System.out.println("E-mail:" + message);
-        super.send(message);
+        if (wrapee != null) {
+            super.send(message);
+        }
     }
 }

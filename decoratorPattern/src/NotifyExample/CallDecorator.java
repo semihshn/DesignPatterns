@@ -1,6 +1,8 @@
 package NotifyExample;
 
 public class CallDecorator extends BaseDecorator {
+    public CallDecorator() {
+    }
 
     public CallDecorator(Notifier notifier) {
         super(notifier);
@@ -9,6 +11,8 @@ public class CallDecorator extends BaseDecorator {
     @Override
     public void send(String message) {
         System.out.println("Call:" + message);
-        super.send(message);
+        if (wrapee != null) {
+            super.send(message);
+        }
     }
 }
