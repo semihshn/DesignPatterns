@@ -1,3 +1,5 @@
+> JPA/EntityFramework gibi bir framework standardı için bir collection yapısı  oluşturmak istediğimizi düşünün, bu framework'de  Set ve List collection type'larının Java ve C# göre Abstraction/Implementation yapıları oluşturulacak.
+
 # Sorun :(
 
 >   ![img.png](images/img.png)
